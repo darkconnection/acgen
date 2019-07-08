@@ -30,8 +30,8 @@ async def on_ready():
 @bot.command()
 async def spotify(context):
 	await db_ready.wait()
-	data = await db.fetchrow('SELECT * FROM priv28 LIMIT 1')
-	await db.execute('DELETE FROM priv28 WHERE id = $1', data['id'])
+	data = await db.fetchrow('SELECT * FROM <row> LIMIT 1')
+	await db.execute('DELETE FROM <row> WHERE id = $1', data['id'])
 	await context.author.send(data['alt'])
 	
 
@@ -39,24 +39,18 @@ async def spotify(context):
 async def hulu(context):
 	await db_ready.wait()
 	data = await db.fetchrow('SELECT * FROM priv33 LIMIT 1')
-	await db.execute('DELETE FROM priv33 WHERE id = $1', data['id'])
+	await db.execute('DELETE FROM <row> WHERE id = $1', data['id'])
 	await context.author.send(data['alt'])
 
 	
 @bot.command()
 async def crunchyroll(context):
 	await db_ready.wait()
-	data = await db.fetchrow('SELECT * FROM priv49 LIMIT 1')
-	await db.execute('DELETE FROM priv49 WHERE id = $1', data['id'])
+	data = await db.fetchrow('SELECT * FROM <row> LIMIT 1')
+	await db.execute('DELETE FROM <row> WHERE id = $1', data['id'])
 	await context.author.send(data['alt'])
 	
 	
-@bot.command()
-async def jambajuice(context):
-	await db_ready.wait()
-	data = await db.fetchrow('SELECT * FROM priv27 LIMIT 1')
-	await db.execute('DELETE FROM priv27 WHERE id = $1', data['id'])
-	await context.author.send(data['alt'])
 
 
 def run():
