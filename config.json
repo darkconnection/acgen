@@ -1,0 +1,15 @@
+{
+	"prefix": "?",
+
+	"tokens": {
+		"discord": "<token>"
+	},
+
+	"db": {
+		"host": "<host>",
+		"ssl": true,
+		"user": "<user>",
+		"database": "<db>",
+		"password": "<password>"
+	}
+}
