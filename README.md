@@ -1,3 +1,1 @@
-"# friendly-rotary-phone" 
-"# friendly-rotary-phone" 
-"# congenial-adventure" 
+Use elephant sql for database and heroku for hosting
